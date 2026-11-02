@@ -2,215 +2,290 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>บ้านไร่กาแฟ - หน้าแรก</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>บ้านสวนคาเฟ่ - หน้าแรก</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: sans-serif;
-            background-color: #f7f4ef;
-            color: #3e2723;
-        }
+body {
+    font-family: sans-serif;
+    background-color: #fcfbf7;
+    color: #333;
+}
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-            padding: 0.8rem 5%;
-        }
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 15px 5%;
+}
 
-        .nav-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+.nav-table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #4e342e;
-        }
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d5a27;
+    text-decoration: none;
+}
 
-        .nav-menu-table {
-            border-collapse: collapse;
-            margin-left: auto;
-        }
+.nav-menu-table {
+    border-collapse: collapse;
+    margin-left: auto;
+}
 
-        .nav-menu-table td {
-            padding: 0 1rem;
-        }
+.nav-menu-table td {
+    padding: 0 10px;
+}
 
-        .nav-menu-table a {
-            color: #3e2723;
-            font-weight: 500;
-            text-decoration: none;
-            cursor: pointer;
-        }
+.nav-menu-table a {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-        .nav-menu-table a:hover {
-            color: #8d6e63;
-        }
+.nav-menu-table a:hover {
+    color: #2d5a27;
+}
 
-        .hero-banner {
-            margin-top: 65px;
-            width: 100%;
-            aspect-ratio: 1920 / 600;
-            min-height: 400px;
-            max-height: 600px;
-            background:
-                linear-gradient(rgba(44, 24, 16, 0.5), rgba(44, 24, 16, 0.5)),
-                url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            color: #ffffff;
-        }
+/* Hero Banner */
+.hero-banner {
+    margin-top: 65px;
+    width: 100%;
+    aspect-ratio: 1920 / 600;
+    min-height: 400px;
+    max-height: 600px;
+    background:
+        linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+        url('images/banner-cafe.jpg') center/cover no-repeat;
+    color: white;
+}
 
-        .hero-table {
-            width: 100%;
-            height: 100%;
-            border-collapse: collapse;
-            text-align: center;
-        }
+.hero-table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
 
-        .hero-table td {
-            vertical-align: middle;
-            padding: 0 20px;
-        }
+.hero-table td {
+    vertical-align: middle;
+    padding: 0 20px;
+}
 
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-        }
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            line-height: 1.5;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-        }
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
 
-        .btn-table {
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
+.btn-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
 
-        .btn-table td {
-            padding: 0 8px;
-        }
+.btn-table td {
+    padding: 8px;
+}
 
-        .btn-main,
-        .btn-secondary {
-            padding: 0.8rem 2rem;
-            color: #ffffff;
-            font-weight: 600;
-            border-radius: 30px;
-            display: inline-block;
-            cursor: pointer;
-            text-decoration: none;
-        }
+.btn-main,
+.btn-secondary {
+    padding: 12px 25px;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
 
-        .btn-main {
-            background-color: #8d6e63;
-        }
+.btn-main {
+    background-color: #d4a373;
+    color: #2b2d42;
+}
 
-        .btn-secondary {
-            background-color: #4e342e;
-        }
+.btn-secondary {
+    background-color: #2d5a27;
+}
 
-        .btn-main:hover,
-        .btn-secondary:hover {
-            opacity: 0.85;
-        }
+.btn-main:hover,
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
 
-        @media (max-width: 768px) {
-            .nav-menu-table {
-                display: none;
-            }
+/* Content Sections */
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+    min-height: 300px;
+}
 
-            .hero-banner {
-                aspect-ratio: auto;
-                height: 75vh;
-            }
+.content-section h2 {
+    color: #2d5a27;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
 
-            .hero-title {
-                font-size: 2rem;
-            }
+.content-section p {
+    font-size: 1.1rem;
+}
 
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-        }
-    </style>
+.content-section:nth-child(even) {
+    background-color: #f0eee5;
+}
+
+/* Footer */
+footer {
+    background-color: #2d5a27;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    .nav-menu-table {
+        display: none;
+    }
+
+    .hero-banner {
+        aspect-ratio: auto;
+        height: 75vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .btn-table,
+    .btn-table tr,
+    .btn-table td {
+        display: block;
+    }
+
+    .btn-table td {
+        margin-bottom: 8px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- เมนูด้านบน -->
-    <header>
-        <table class="nav-table">
-            <tr>
-                <td style="text-align: left;">
-                    <span class="logo">บ้านไร่กาแฟ</span>
-                </td>
+<!-- HEADER -->
+<header>
+    <table class="nav-table">
+        <tr>
+            <td style="text-align:left;">
+                <a href="index.html" class="logo">บ้านสวนคาเฟ่</a>
+            </td>
 
-                <td style="text-align: right;">
-                    <table class="nav-menu-table">
-                        <tr>
-                            <td><a href="index.html">หน้าแรก</a></td>
-                            <td><a href="index2.html">บรรยากาศไร่</a></td>
-                            <td><a href="index3.html">เมนูกาแฟ</a></td>
-                            <td><a href="index4.html">ขนมโฮมเมด</a></td>
-                            <td><a href="index6.html">ติดต่อเรา</a></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </header>
+            <td style="text-align:right;">
+                <table class="nav-menu-table">
+                    <tr>
+                        <td><a href="index.html">หน้าแรก</a></td>
+                        <td><a href="index2.html">บรรยากาศ</a></td>
+                        <td><a href="index3.html">เมนูน้ำ</a></td>
+                        <td><a href="index4.html">เมนูของหวาน</a></td>
+                        <td><a href="index5.html">เมนูแนะนำ</a></td>
+                        <td><a href="index6.html">ติดต่อเรา</a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</header>
 
-    <!-- ภาพหน้าปก -->
-    <section class="hero-banner">
-        <table class="hero-table">
-            <tr>
-                <td>
-                    <h1 class="hero-title">บ้านไร่กาแฟ</h1>
+<!-- HERO BANNER -->
+<section class="hero-banner">
+    <table class="hero-table">
+        <tr>
+            <td>
+                <h1 class="hero-title">บ้านสวนคาเฟ่</h1>
 
-                    <p class="hero-subtitle">
-                        สัมผัสรสชาติกาแฟสดจากไร่
-                        อบอุ่น คลาสสิก ท่ามกลางบรรยากาศธรรมชาติ
-                    </p>
+                <p class="hero-subtitle">
+                    จิบกาแฟสดรสเลิศ สัมผัสความร่มรื่นใจกลางธรรมชาติ
+                    และเมนูโฮมเมดแสนอร่อย
+                </p>
 
-                    <!-- ปุ่มเมนู -->
-                    <table class="btn-table">
-                        <tr>
-                            <td>
-                                <a href="index3.html" class="btn-main">
-                                    ดูเมนูกาแฟ
-                                </a>
-                            </td>
+                <!-- ปุ่มเมนู -->
+                <table class="btn-table">
+                    <tr>
+                        <td>
+                            <a href="index3.html" class="btn-secondary">
+                                เมนูน้ำ
+                            </a>
+                        </td>
 
-                            <td>
-                                <a href="index4.html" class="btn-secondary">
-                                    ดูขนมโฮมเมด
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
+                        <td>
+                            <a href="index4.html" class="btn-secondary">
+                                เมนูของหวาน
+                            </a>
+                        </td>
 
-                </td>
-            </tr>
-        </table>
-    </section>
+                        <td>
+                            <a href="index5.html" class="btn-secondary">
+                                เมนูแนะนำ
+                            </a>
+                        </td>
+
+                        <td>
+                            <a href="index6.html" class="btn-main">
+                                ติดต่อเรา
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!-- CONTENT -->
+<section class="content-section">
+    <h2>ยินดีต้อนรับสู่บ้านสวนคาเฟ่</h2>
+    <p>
+        คาเฟ่บรรยากาศอบอุ่น รายล้อมด้วยธรรมชาติ
+        พร้อมเครื่องดื่มและขนมแสนอร่อย
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© บ้านสวนคาเฟ่ | ยินดีต้อนรับทุกท่าน</p>
+</footer>
 
 </body>
 </html>
